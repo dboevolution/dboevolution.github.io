@@ -1,0 +1,490 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    cursor: url('images/cursor.png'), auto;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-image: url("images/background.jpg");
+    min-height: 100%;
+    /* Ensure background covers the entire viewport */
+    background-size: cover;
+    /* Fix background image */
+    background-attachment: fixed;
+}
+
+body a {
+    color: #e45000;
+}
+
+body a:hover {
+    color: #aa4c19; /* Set text color to black */
+}
+
+/* Add space between paragraphs */
+h1, h2, h3, h4, h5, h6,
+table,
+blockquote,
+ul, ol,
+hr,
+p {
+  margin-bottom: 20px; /* Adjust the pixel value for desired spacing */
+}
+
+/* Indent list items */
+ul, ol {
+  padding-left: 2em; /* Or use another unit like px */
+}
+
+code {
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    background-color: #333;
+    padding: 2px 5px;
+    border-radius: 3px;
+    color: #fff;
+}
+
+.dotted {
+    border: none;
+    border-top: 1px dotted #636363; /* Add dotted border */
+    height: 0; /* Ensure no space is taken by the element */
+}
+
+/* Header */
+header {
+    position: relative;
+    overflow: hidden;
+}
+
+.header-image-container {
+    position: relative;
+    width: 100%;
+    height: 200px; /* Set the height of the header image to 200px */
+}
+
+.header-image-container img {
+    width: 100%;
+    height: 100%; /* Ensure the image fills the container */
+    object-fit: cover; /* Zooming the image */
+}
+
+@media only screen and (max-width: 600px) {
+    .header-image-container {
+        height: 150px; /* Reduce height for smaller screens */
+    }
+}
+
+.header-image-container h1 {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: black; /* Text color black */
+    font-size: 24px;
+}
+
+/* Navigation Menu */
+nav {
+    background-color: #f2f2f2; /* Lighter gray background */
+    padding: 10px 20px; /* Adjust padding as needed */
+    overflow: hidden; /* Clear floats */
+    border-top: 4px solid black; /* Add black border at the top */
+    border-bottom: 2px solid black; /* Increase border thickness */
+    font-weight: bold; /* Use bold font */
+    color: black; /* Set text color to black */
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li.left {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li.right {
+    float: right;
+    margin-left: 20px;
+}
+
+@media only screen and (max-width: 600px) {
+    nav ul li {
+        font-size: 0.8em;
+    }
+
+    nav ul li.right {
+        padding-top: 3px;
+    }
+}
+
+nav ul li a {
+    color: black; /* Set text color to black */
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    color: #636363; /* Set text color to black */
+    text-decoration: none;
+}
+
+nav ul li a.active {
+    color: #fc6514; /* Change color for current opened sections */
+    text-decoration: none;
+    pointer-events: none;
+    cursor: default;
+}
+
+/* Main Content */
+.container {
+    max-width: 500px;
+    margin: 50px auto; /* Center the container */
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgba(249, 249, 249, 0.8); /* Semi-transparent background */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2); /* Black shadow border */
+}
+
+@media only screen and (max-width: 600px) {
+    .container {
+        margin: 20px 20px 96px 20px;
+    }
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input[type="submit"],
+input[type="submit"] {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+input[type="submit"]:hover {
+    background-color: #555;
+}
+
+/* Base Container */
+.base-container {
+    padding-bottom: 74px;
+}
+
+.base-container-item {
+    margin: 32px 300px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgba(249, 249, 249, 0.8); /* Semi-transparent background */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2); /* Black shadow border */
+}
+
+@media only screen and (max-width: 600px) {
+    .base-container-item {
+        margin: 10px;
+    }
+}
+
+.base-container-item img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.base-container-item h3 {
+    color: #333;
+}
+
+.base-container-item ul,
+.base-container-item p {
+    color: #636363;
+    text-align: justify;
+}
+
+.base-container-item hr {
+    border: none;
+    border-top: 1px dotted #636363; /* Add dotted border */
+    margin: 10px 0; /* Adjust margin as needed */
+    height: 0; /* Ensure no space is taken by the element */
+}
+
+.news-link {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.article-title {
+    margin-bottom: 2px;
+}
+
+.article-date {
+    font-style: italic;
+    font-size: 0.75em;
+}
+
+.header-image {
+    width: 100%;
+    height: auto;
+    max-height: 300px;
+    object-fit: cover;
+    border: 1px solid #636363; /* Add gray border */
+    border-top-left-radius: 10px; /* Rounded top left corner */
+    border-top-right-radius: 10px; /* Rounded top right corner */
+}
+
+/* Table style */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* Table header style */
+th {
+    background-color: #f2f2f2; /* Light gray background */
+    text-align: center;
+    border: 1px solid #ddd; /* Add borders */
+    padding: 8px;
+}
+
+/* Table row style */
+tr {
+    text-align: center;
+}
+
+/* Alternating row color */
+tr:nth-child(even) {
+    background-color: #f9f9f9; /* Lighter gray background */
+}
+
+/* Differentiated alternating row color */
+tr:nth-child(odd) {
+    background-color: #e6e6e6; /* Slightly darker gray background */
+}
+
+/* Table data (cell) style */
+td {
+    border: 1px solid #ddd; /* Add borders */
+    padding: 8px;
+}
+
+/* Center all content inside cells */
+td, th {
+    text-align: center;
+}
+
+/* Blockquote style */
+blockquote {
+    background-color: #f5f5f5; /* Light gray background */
+    border-left: 5px solid #ccc; /* Left border */
+    margin: 20px 0; /* Margin around blockquote */
+    padding: 10px; /* Padding inside blockquote */
+}
+
+/* Style for the content inside blockquote */
+blockquote p {
+    margin: 0; /* Remove default paragraph margin */
+    font-style: italic; /* Italicize the text */
+}
+
+/* CSS for panel container */
+.panel-container {
+    display: flex; /* Use flexbox */
+    height: calc(100vh - 40px); /* Make panel-container occupy full viewport height, subtracting header and footer heights */
+}
+
+/* CSS for left menu */
+.left-menu {
+    width: 15%; /* Adjust width as needed */
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    background-color: rgba(249, 249, 249, 0.8); /* Semi-transparent background */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2); /* Black shadow border */
+    margin: 20px 0 60px 20px;
+}
+
+.left-menu .panel-link {
+    display: block;
+    text-decoration: none;
+    color: #333;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #ddd;
+    text-align: center;
+}
+
+.left-menu .panel-link:hover {
+    background-color: #ccc;
+}
+
+/* CSS for panel content */
+.panel-content {
+    width: 85%; /* Adjust width as needed */
+    margin: 20px 20px 60px 20px;
+    padding: 20px;
+    box-sizing: border-box;
+    display: none; /* Initially hide all panel content */
+    border-radius: 10px;
+    background-color: rgba(249, 249, 249, 0.8); /* Semi-transparent background */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2); /* Black shadow border */
+}
+
+/* CSS for panel content sections that are displayed */
+.panel-content:target {
+    display: block;
+}
+
+/* Style the form container */
+.inner-panel-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px dotted #636363;
+  border-radius: 5px;
+  background-color: rgba(249, 249, 249, 0.6);
+  width: 400px; /* Adjust width as needed */
+}
+
+/* Style the label */
+label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+/* Style the new container for select and button */
+.character-backup-select {
+  display: flex; /* Make it a flexbox container */
+  justify-content: space-between; /* Align items on opposite ends */
+}
+
+/* Style the select element */
+#character-select {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  font-size: 16px;
+  margin-right: 10px;
+  flex: 1; /* Allow select to grow within available space */
+}
+
+/* Style the button */
+button[type="submit"] {
+  background-color: #4CAF50; /* Green */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Style the button on hover */
+button[type="submit"]:hover {
+  background-color: #45A049; /* Darker green */
+}
+
+/* Footer */
+footer {
+    background-color: #f2f2f2;
+    color: black;
+    text-align: center;
+    padding: 10px 20px;
+    border-top: 2px solid black; /* Black top border */
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    max-height: 3em;
+    overflow: hidden;
+    text-overflow: ellipsis; /* Adds an ellipsis (...) to indicate truncated text */
+    white-space: nowrap; /* Ensures the text doesn't wrap */
+}
+
+/* Styles for the toast */
+.toast {
+    visibility: hidden;
+    min-width: 250px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 20px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: 30px;
+    transform: translateX(-50%);
+}
+/* Show the toast */
+.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+/* Animations for fade in and fade out */
+@-webkit-keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+}
+@keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+}
+@-webkit-keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+}
+@keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+}
+
+.change-password-form input {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.spoiler {
+    background-color: #333;
+    color: #333;
+}
+
+.spoiler:focus,
+.spoiler:hover {
+    color: #fff;
+}
+
+.donation-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+#kofiframe {
+    border: none;
+    border-radius: 10px;
+}
